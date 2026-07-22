@@ -1,7 +1,5 @@
 # Project Governance
 
-> **Last Updated:** 2026-07-22
-
 ---
 
 ## 1. AI Agent Operating Rules

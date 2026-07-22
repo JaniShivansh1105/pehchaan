@@ -1,7 +1,5 @@
 # Engineering Plan
 
-> **Last Updated:** 2026-07-22
-
 ---
 
 ## 1. Development Roadmap

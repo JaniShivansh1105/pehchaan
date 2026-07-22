@@ -1,7 +1,5 @@
 # Responsible FinTech, Security & Privacy
 
-> **Last Updated:** 2026-07-22
-
 ---
 
 ## 1. Core Ethical Commitments

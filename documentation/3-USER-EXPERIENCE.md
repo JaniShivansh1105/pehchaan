@@ -1,7 +1,5 @@
 # User Experience
 
-> **Last Updated:** 2026-07-22
-
 ---
 
 ## 1. Target Personas

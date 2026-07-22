@@ -1,7 +1,5 @@
 # Product Foundation
 
-> **Last Updated:** 2026-07-22
-
 ---
 
 ## 1. Product Identity

@@ -1,7 +1,5 @@
 # AI and Data Strategy
 
-> **Last Updated:** 2026-07-22
-
 ---
 
 ## 1. Principles & Limitations

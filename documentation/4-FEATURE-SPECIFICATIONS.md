@@ -1,7 +1,5 @@
 # Feature Specifications
 
-> **Last Updated:** 2026-07-22
-
 ---
 
 ## Module 01 — Public Experience

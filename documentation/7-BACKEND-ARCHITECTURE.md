@@ -1,8 +1,5 @@
 # Backend Architecture (Planned)
 
-> **Last Updated:** 2026-07-22  
-> **Status:** PLANNED -- not implemented in the pre-screening prototype.
-
 ---
 
 ## 1. Technology Stack
