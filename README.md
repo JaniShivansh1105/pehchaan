@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-# pehchaan
-AI-powered financial intelligence platform transforming alternative financial behaviour into explainable credit readiness and accessible micro-investment guidance.
-=======
 # PEHCHAAN
 
 > Financial potential should be understood before it is overlooked.
@@ -251,4 +247,3 @@ PEHCHAAN is built on foundational principles of ethical finance:
 | Harin Joshi | Backend & API Developer |
 | Durgesh Singh | Database & System Architecture |
 | Aarchi Shah | Research, UI/UX & Testing |
->>>>>>> Stashed changes
