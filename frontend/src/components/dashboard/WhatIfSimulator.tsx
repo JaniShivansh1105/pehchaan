@@ -1,6 +1,9 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { ArrowRight, SlidersHorizontal } from "lucide-react"
 
+import Link from "next/link"
+import { mockUser } from "@/lib/mock-data"
+
 export function WhatIfSimulator() {
   return (
     <Card className="h-full flex flex-col group overflow-hidden relative border-neutral-200 min-h-0">
@@ -22,7 +25,7 @@ export function WhatIfSimulator() {
           <div className="flex items-center justify-between bg-neutral-50 rounded-lg p-3 border border-neutral-100 mb-3 shrink-0">
             <div className="text-center">
               <p className="text-[9px] text-neutral-500 mb-0.5 font-medium uppercase tracking-wider">Current</p>
-              <p className="text-xl font-display font-bold text-neutral-900 leading-none">742</p>
+              <p className="text-xl font-display font-bold text-neutral-900 leading-none">{mockUser.readinessScore}</p>
             </div>
             
             <div className="flex flex-col items-center px-2">
@@ -34,15 +37,15 @@ export function WhatIfSimulator() {
             
             <div className="text-center">
               <p className="text-[9px] text-brand mb-0.5 font-medium uppercase tracking-wider">Projected</p>
-              <p className="text-xl font-display font-bold text-success leading-none">768</p>
+              <p className="text-xl font-display font-bold text-success leading-none">{mockUser.readinessScore + 26}</p>
             </div>
           </div>
         </div>
         
         <div className="flex flex-row items-center justify-between gap-3 mt-auto shrink-0">
-          <button className="py-2 px-3 bg-white border border-neutral-200 text-neutral-700 text-[11px] font-semibold rounded-md hover:border-brand hover:text-brand transition-all shadow-sm shrink-0">
-            Explore Scenario
-          </button>
+          <Link href="/simulator?scenario=payment" className="w-full py-2 px-3 mt-2 bg-white text-neutral-800 border border-neutral-200 text-xs font-semibold rounded-lg hover:bg-neutral-50 hover:border-neutral-300 transition-all shadow-sm flex items-center justify-center gap-2 shrink-0">
+          Explore Scenario
+          </Link>
           
           <p className="text-[8px] text-neutral-400 max-w-[120px] text-right leading-tight">
             *Simulation only. Not a guaranteed outcome.

@@ -1,6 +1,9 @@
 "use client"
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
+import { mockReadinessHistory } from "@/lib/mock-data"
 import { 
   AreaChart, 
   Area, 
@@ -12,20 +15,16 @@ import {
 } from "recharts"
 
 export function ReadinessTrend() {
-  const data = [
-    { month: "Feb", score: 618 },
-    { month: "Mar", score: 645 },
-    { month: "Apr", score: 662 },
-    { month: "May", score: 701 },
-    { month: "Jun", score: 724 },
-    { month: "Jul", score: 742 },
-  ]
+  const data = mockReadinessHistory
 
   return (
     <Card className="h-full flex flex-col min-h-0">
       <CardHeader className="p-3 lg:p-4 pb-0 shrink-0">
         <div className="flex items-center justify-between">
-          <CardTitle className="text-sm font-semibold">Readiness Trend</CardTitle>
+          <Link href="/progress" className="hover:text-brand transition-colors group flex items-center">
+            <CardTitle className="text-sm font-semibold">Readiness Trend</CardTitle>
+            <ArrowRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </Link>
           <span className="text-[10px] text-neutral-500 font-medium bg-neutral-100 px-1.5 py-0.5 rounded-md">Last 6 months</span>
         </div>
       </CardHeader>

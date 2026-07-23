@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { ArrowRight, Sparkles } from "lucide-react"
+import Link from "next/link"
 
 export function ImprovementPath() {
   return (
@@ -27,10 +28,10 @@ export function ImprovementPath() {
           </div>
         </div>
 
-        <button className="w-full py-2 px-3 mt-2 bg-brand text-white text-xs font-semibold rounded-lg hover:bg-brand-dark transition-all shadow-sm flex items-center justify-center gap-2 shrink-0">
+        <Link href="/improvement?action=stable-savings" className="w-full py-2 px-3 mt-2 bg-brand text-white text-xs font-semibold rounded-lg hover:bg-brand-dark transition-all shadow-sm flex items-center justify-center gap-2 shrink-0">
           View Improvement Plan
           <ArrowRight className="h-3.5 w-3.5" />
-        </button>
+        </Link>
       </CardContent>
     </Card>
   )

@@ -1,6 +1,8 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { BookOpen, ShieldAlert, TrendingUp } from "lucide-react"
 
+import Link from "next/link"
+
 export function MicroInvestment() {
   return (
     <Card className="h-full flex flex-col border-neutral-200 min-h-0">
@@ -32,10 +34,10 @@ export function MicroInvestment() {
           </p>
         </div>
         
-        <button className="w-full py-2 px-3 mt-2 bg-neutral-900 text-white text-[11px] font-semibold rounded-lg hover:bg-neutral-800 transition-colors shadow-sm flex items-center justify-center gap-2 shrink-0">
+        <Link href="/micro-investment" className="w-full py-2 px-3 mt-2 bg-neutral-900 text-white text-[11px] font-semibold rounded-lg hover:bg-neutral-800 transition-colors shadow-sm flex items-center justify-center gap-2 shrink-0">
           <BookOpen className="h-3.5 w-3.5 text-neutral-300" />
           Explore Learning Path
-        </button>
+        </Link>
       </CardContent>
     </Card>
   )

@@ -1,10 +1,12 @@
 import { TrendingUp } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
+import { mockUser } from "@/lib/mock-data"
 
 export function HeroReadiness() {
-  const score = 742
-  const maxScore = 900
+  const score = mockUser.readinessScore
+  const maxScore = mockUser.maxScore
   const percentage = (score / maxScore) * 100
   
   // SVG arc calculation for a semi-circle gauge - reduced size for 125% zoom fit
@@ -24,8 +26,8 @@ export function HeroReadiness() {
           
           <div className="flex flex-col text-left space-y-2.5 flex-1 min-w-0">
             <div>
-              <Badge variant="success" className="mb-1.5 text-[10px] px-1.5 py-0">
-                Status: GOOD
+              <Badge variant="success" className="mb-1.5 text-[10px] px-1.5 py-0 uppercase">
+                Status: {mockUser.scoreStatus}
               </Badge>
               <h2 className="text-xl lg:text-2xl font-display font-semibold text-foreground tracking-tight leading-none truncate">
                 Credit Readiness Score
@@ -41,14 +43,14 @@ export function HeroReadiness() {
               </div>
               <div className="pr-2">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-sm font-bold text-success leading-none">+24 pts</span>
+                  <span className="text-sm font-bold text-success leading-none">+{mockUser.scoreChange} pts</span>
                 </div>
                 <p className="text-[9px] text-neutral-500 font-medium mt-0.5">Since last assessment</p>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center justify-center shrink-0 w-[140px] relative">
+          <Link href="/readiness" className="flex items-center justify-center shrink-0 w-[140px] relative hover:opacity-90 transition-opacity cursor-pointer">
             <div className="relative w-full flex items-end justify-center overflow-hidden" style={{ height: radius + stroke }}>
               <svg
                 height={radius * 2}
@@ -89,7 +91,7 @@ export function HeroReadiness() {
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
           
         </div>
       </CardContent>
