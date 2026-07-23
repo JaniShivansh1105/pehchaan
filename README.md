@@ -245,5 +245,5 @@ PEHCHAAN is built on foundational principles of ethical finance:
 | Shivansh Jani | Team Lead & Frontend Developer |
 |  | AI/ML & Explainability Developer |
 |  | Backend & API Developer |
-|  | Database & System Architecture |
+| Durgesh Singh | Database & System Architecture |
 |  | Research, UI/UX & Testing |
