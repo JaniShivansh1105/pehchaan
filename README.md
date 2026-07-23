@@ -4,6 +4,9 @@
 
 PEHCHAAN is an explainable, consent-driven financial readiness platform that uses alternative behavioural financial signals to help underserved and thin-file individuals understand, improve, and build their financial readiness.
 
+**Current Prototype:** Interactive frontend experience and FastAPI backend foundation  
+**Planned Intelligence Layer:** ML-based readiness assessment and SHAP explainability
+
 ---
 
 ## 1. The Problem
@@ -40,7 +43,7 @@ PEHCHAAN is designed for individuals who are actively participating in the econo
 
 The platform operates on a clear, consent-driven data flow. 
 
-*(Note: The current frontend prototype demonstrates the complete product experience using structured mock data. The ML scoring, SHAP explainability, and production data pipelines form the next implementation phase.)*
+*(Note: The current prototype demonstrates the complete product experience using structured mock data and includes a FastAPI backend foundation. The ML-based scoring model, SHAP explainability, production data pipelines, and full frontend-backend integration form the next implementation phase.)*
 
 ```mermaid
 graph TD
@@ -120,12 +123,15 @@ Rather than stopping at a number, the system explains *what* is helping or limit
 PEHCHAAN's architecture is designed to be modern, scalable, and explainable.
 
 **Current Implementation:**
-The repository currently contains the **Frontend** layer, fully implemented as an interactive, stateful, responsive prototype utilizing Next.js, Tailwind CSS, Recharts, and local storage persistence.
 
-**Planned Architecture:**
-- **Backend:** FastAPI (Python) for robust API delivery.
-- **Database:** PostgreSQL for persistent structured user and telemetry data.
-- **AI/ML Layer:** A machine-learning readiness assessment model complemented by SHAP (SHapley Additive exPlanations) to provide feature-level explainability.
+The repository currently contains a fully interactive, stateful, and responsive **Next.js frontend prototype**, along with a **FastAPI backend foundation** featuring REST API routes, SQLAlchemy data models, Alembic migration support, demo data seeding, and a PostgreSQL-ready persistence architecture.
+
+The current product experience is primarily powered by structured frontend mock data. Full frontend-backend integration, production data pipelines, and the ML-based intelligence layer remain part of the next development phase.
+
+**Planned Intelligence Layer:**
+- **AI/ML:** A machine-learning readiness assessment model for behavioural financial analysis.
+- **Explainability:** SHAP (SHapley Additive exPlanations) for transparent, feature-level explanations of model outputs.
+- **Production Integration:** End-to-end integration of the frontend, backend, persistent database, and intelligence pipeline.
 
 ## 9. Technology Stack
 
@@ -137,17 +143,17 @@ The repository currently contains the **Frontend** layer, fully implemented as a
 | **Icons** | Lucide React | Consistent SVG iconography | Implemented |
 | **Charts** | Recharts | Readiness and progress visualization | Implemented |
 | **Persistence** | LocalStorage | Frontend prototype state management | Implemented |
-| **Backend** | FastAPI | API and application services | Planned |
+| **Backend** | FastAPI | API and application services | Foundation Implemented |
+| **Database** | PostgreSQL | Persistent structured data | Architecture Implemented |
 | **AI/ML** | Python ML stack | Readiness assessment | Planned |
 | **Explainability** | SHAP | Factor-level model explanations | Planned |
-| **Database** | PostgreSQL | Persistent structured data | Planned |
 
 ## 10. Current Frontend Implementation
 
-The frontend prototype is functionally rich and presentation-ready. It includes:
-- **One-screen Overview Dashboard:** A responsive, densely packed command center with zero vertical scrolling required on desktop monitors (125% zoom).
+The frontend prototype is fully interactive and presentation-ready. It includes:
+- **One-screen Overview Dashboard:** A responsive, information-rich command centre designed to present core readiness insights without unnecessary navigation.
 - **Responsive Application Shell:** Mobile sidebar drawers and adaptable layouts.
-- **Interactive Simulator:** Dynamic, real-time score projection modeling.
+- **Interactive Simulator:** Dynamic, real-time score projection modelling.
 - **Persistent State:** Local storage integration ensures user actions (like checking off improvement steps or modifying consent) persist across sessions.
 - **Polished UI States:** Loading, empty, error, and not-found states are architecturally integrated.
 - **Deep-Linked Workflows:** Notifications and dashboard widgets link directly to filtered, expanded views on detailed pages.
@@ -158,18 +164,29 @@ The frontend prototype is functionally rich and presentation-ready. It includes:
 
 ```text
 PEHCHAAN/
-├── frontend/                 # Complete Next.js interactive prototype
-│   ├── src/
-│   │   ├── app/              # Next.js App Router pages (Overview, Simulator, etc.)
-│   │   ├── components/       # Reusable UI components and dashboard widgets
-│   │   └── lib/              # Custom hooks (e.g., useLocalStorage) and mock data
-├── documentation/            # Product, architecture, and engineering documentation
-└── README.md                 # Project overview (this file)
+├── frontend/                 # Next.js interactive frontend prototype
+│   └── src/
+│       ├── app/              # Application routes and product pages
+│       ├── components/       # Reusable UI components and dashboard widgets
+│       └── lib/              # Mock data, hooks, utilities, and API client
+│
+├── backend/                  # FastAPI backend foundation
+│   ├── app/
+│   │   ├── api/              # REST API routes
+│   │   ├── core/             # Configuration and database setup
+│   │   ├── models/           # SQLAlchemy data models
+│   │   └── schemas/          # API validation and serialization schemas
+│   ├── alembic/              # Database migration infrastructure
+│   ├── tests/                # Backend API tests
+│   └── seed_data.py          # Demo data seeding
+│
+├── documentation/            # Product and technical documentation
+└── README.md                 # Project overview
 ```
 
-## 12. Getting Started
+## 12. Running the Interactive Prototype
 
-Follow these steps to run the interactive frontend prototype locally.
+The frontend provides the primary interactive demonstration of the current PEHCHAAN prototype. Follow these steps to run it locally.
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -206,6 +223,8 @@ Follow these steps to run the interactive frontend prototype locally.
 
 Open `http://localhost:3000` in your browser to interact with the platform.
 
+> For backend setup and API-specific instructions, refer to `backend/README.md`.
+
 ## 13. Current Status & Roadmap
 
 **Phase 1 — Interactive Frontend Prototype (Completed)**
@@ -214,18 +233,26 @@ Open `http://localhost:3000` in your browser to interact with the platform.
 - Local mock-data architecture and frontend persistence
 - Interactive simulation experience and consent controls
 
-**Phase 2 — Backend & Data Foundation (Next)**
-- FastAPI backend implementation
-- PostgreSQL persistence
-- Authentication and consent-based data ingestion pipelines
+**Phase 2 — Backend & Data Foundation (Foundation Completed)**
+- FastAPI application and REST API foundation
+- SQLAlchemy domain models and PostgreSQL-ready architecture
+- Alembic migration infrastructure
+- Demo data seeding and backend API tests
+- Frontend API client foundation
 
-**Phase 3 — Readiness Intelligence (Planned)**
+**Phase 3 — Integration & Readiness Intelligence (Next)**
+- Full frontend-backend integration
+- Production database deployment and persistence
+- Authentication and consent-based data ingestion
 - Feature engineering pipeline
-- ML readiness model and SHAP explainability integration
+- ML readiness assessment model
+- SHAP-based explainability
 
-**Phase 4 — Personalisation & Simulation (Planned)**
-- Recommendation engine for personalized improvement paths
-- Production-grade what-if simulation using real backend data
+**Phase 4 — Production Personalisation (Planned)**
+- Data-driven personalised improvement recommendations
+- Production-grade What-If simulation
+- Risk-profile-based financial education pathways
+- Production security, monitoring, and deployment
 
 ## 14. Responsible AI, Privacy and Safety
 
