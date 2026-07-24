@@ -273,4 +273,4 @@ PEHCHAAN is built on foundational principles of ethical finance:
 |  | AI/ML & Explainability Developer |
 |  | Backend & API Developer |
 | Durgesh Singh | Database & System Architecture |
-|  | Research, UI/UX & Testing |
+|  Aarchi Shah | Research, UI/UX & Testing |
