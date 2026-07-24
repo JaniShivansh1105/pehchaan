@@ -270,7 +270,7 @@ PEHCHAAN is built on foundational principles of ethical finance:
 | Team Member | Role |
 | --- | --- |
 | Shivansh Jani | Team Lead & Frontend Developer |
-|  | AI/ML & Explainability Developer |
+| Yajash Khamar | AI/ML & Explainability Developer |
 | Harin Joshi | Backend & API Developer |
 | Durgesh Singh | Database & System Architecture |
 |  Aarchi Shah | Research, UI/UX & Testing |
